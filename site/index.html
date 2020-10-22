@@ -1,11 +1,746 @@
 <!DOCTYPE html>
-<head>
-<title>Welcome to Coursera</title>	
-</head>
-<body>
-	<h1>
-		Welcome to Coursera
-	</h1>
-	
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="csrf-token" content="EnydTPV7QoJOxCiylC49tysV6XdTLuWOXeVWQO3T">
 
-</body>
+        <title>Accueil - Life TV</title>
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="https://lifetv.ci/resources/css/bootstrap.css">
+        <link rel="stylesheet" href="https://lifetv.ci/resources/css/fonts.css?v=1.0">
+        
+        <link rel="stylesheet" href="https://lifetv.ci/resources/css/cycle.options.css?v=1.2">
+
+        <link rel="stylesheet" href="https://lifetv.ci/resources/css/icomoon.css?v=1.4">
+        <link rel="stylesheet" href="https://lifetv.ci/resources/css/style.css?v=4.5">
+        <link rel="stylesheet" href="https://lifetv.ci/resources/css/responsive.css?v=1.1">
+
+        <link rel="shortcut icon" href="https://lifetv.ci/resources/img/logolarge.png" />
+
+        <link rel="stylesheet" href="https://lifetv.ci/resources/owl/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://lifetv.ci/resources/owl/assets/owl.theme.default.min.css">
+
+        <style type="text/css">
+            .bgPopUp{
+                position: fixed;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+                z-index: 990;
+                background: rgba(0,0,0,0.5);
+                display: none;
+            }
+            .popUp{
+                position: fixed;
+                width: 60%;
+                left: 20%;
+                height: auto;
+                padding: 1%;
+                background: #FFF;
+                border-radius: 8px;
+                z-index: 999;
+                top: 15%;
+                display: none;
+            }
+            .closePopUp{
+                position: fixed;
+                top: 15%;
+                margin-top: -35px;
+                right: 20%;
+                padding: 10px;
+                background: #FFF;
+                border-radius: 8px 8px 0px 0px;
+                cursor: pointer;
+            }
+            
+        </style>
+    </head>
+    <body>
+
+        <div class="bgPopUp" onclick="closePopup()"></div>
+        <div class="popUp">
+            <div class="closePopUp" onclick="closePopup()">Fermer X</div>
+            <video width="100%" controls class="" id="popupVideo">
+                <source src="" type="video/mp4">
+            </video>
+        </div>
+        <div class="header gradient">
+            <div class="container">
+                <div class="row">
+                    <div class="col-3 col-md-3">
+                        <a href="https://lifetv.ci/home"><img src="https://lifetv.ci/resources/img/logo.png" alt="" class="logo"></a>
+                    </div>
+                    <div class="col-9 col-md-9 menu-holder">
+                        <ul class="main-menu">
+                            <li class=" d-none d-sm-none d-md-inline-block"><a href="https://lifetv.ci/la-chaine">La chaine</a></li>
+                            <li class=" d-none d-sm-none d-md-inline-block"><a href="https://lifetv.ci/programme">Grille TV</a></li>
+                            
+                            <li class=" d-none d-sm-none d-md-inline-block"><a href="https://lifetv.ci/replays/emissions">Replays</a></li>
+
+                            <li class="menuic d-sm-block d-md-none"><a href="#"><span class="icon-menu"></span></a></li>
+                        </ul>
+
+                                                <!-- <a href="https://lifetv.ci/front/login" class="deconnexion d-none d-sm-none d-md-inline-block">Se connecter</a> -->
+                        <a href="https://lifetv.ci/direct" class="direct solo d-none d-sm-none d-md-inline-block">Suivre le direct</a>
+                                            </div>
+                </div>
+
+                <div class="second-menu z-depth-1">
+                    <div class="inner">
+                        <ul>
+                            <li class="">
+                                <a href="https://lifetv.ci/la-chaine">La chaine</a>
+                            </li>
+                            <li class="">
+                                <a href="https://lifetv.ci/programme">Grille TV</a>
+                            </li>
+                            <li class="">
+                                <a href="https://lifetv.ci/front/replays">Replays</a>
+                            </li>
+                                                                                    <li class="">
+                                <a href="https://lifetv.ci/direct" class="direct">Suivre le direct</a>
+                            </li>
+
+                            <li class="closer">
+                                <a href="#">Fermer le menu</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+
+
+
+<style type="text/css">
+    .maincontent .program .foot a{
+        text-decoration: none;
+    }
+
+    .fb:hover{
+        color: #0070aa !important
+    }
+    .insta:hover{
+        color: #f106e3 !important
+    }
+    .yout:hover{
+        color: #ba1515 !important
+    }
+    .twit:hover{
+        color: #00ACEE !important
+    }
+</style>
+
+<div class="slide cycle-slideshow" 
+    data-cycle-pager=".slide .cycle-pager"
+    data-cycle-overlay-template="<div class='container'><div class='infos'><div class='category'><p>{{cat}} <span>> {{scat}}</span></p></div><h3>{{title}}</h3><p class='miniinfos'>{{miniinfos}}</p><p class='desc'>{{desc}}</p></div></div>">
+        <img src="https://lifetv.ci/slider/cover_big/1597175734.jpg" alt="" data-cycle-cat="Talk show" data-cycle-scat="Divertissement" data-cycle-title="Life Talk" data-cycle-miniinfos="Le débat sans filtre sur l’actualité" data-cycle-desc="Brice et son équipe traitent de l’actualité en grande partie, politique mais aussi économique et sociale, sans oublier le sport et la culture.">
+        <img src="https://lifetv.ci/slider/cover_big/1594233529.png" alt="" data-cycle-cat="Talk show" data-cycle-scat="Divertissement" data-cycle-title="Life Wkd" data-cycle-miniinfos="Le talk show du vendredi soir" data-cycle-desc="Démarrez le week-end en beauté et dans la bonne humeur avec Konnie et ses chroniqueuses.">
+        <img src="https://lifetv.ci/slider/cover_big/1594232274.png" alt="" data-cycle-cat="Talk show" data-cycle-scat="Divertissement" data-cycle-title="WILLY À MIDI" data-cycle-miniinfos="Le rendez-vous de la pause déjeuner !" data-cycle-desc="Willy Dumbo vous donne rendez-vous du lundi au vendredi à 12h00 autour des buzz et des enquêtes les plus dingues de la Tv.">
+        <div class="cycle-overlay custom"></div>
+    <div class="overlay">
+        <div class="container">
+            <div class="cycle-pager"></div>
+            <ul class="socials">
+                <li><a target="blank" href="https://web.facebook.com/LIFETVCI?_rdc=1&amp;amp;_rdr" class="fb"><i class="icon-facebook-with-circle"></i></a></li>
+                <li><a target="blank" href="https://www.instagram.com/lifetvofficiel/" class="insta"><i class="icon-instagram-with-circle"></i></a></li>
+                <li><a target="blank" href="https://www.youtube.com/channel/UCjV4LsFRnOsM_qzDk15bB5Q?view_as=subscriber" class="yout"><i class="icon-youtube-with-circle"></i></a></li>
+                <li><a href="https://twitter.com/lifetvci" class="twit"><i class="icon-twitter-with-circle"></i></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="maincontent home">
+    <br>
+    <div class="encart">
+    <div class="container">
+    	<a href="https://lifetv.ci/tnt">
+        	<img src="https://lifetv.ci/resources/img/BANNIERE-TNT.png" alt="">
+        </a>
+    </div>
+</div>
+
+    <div class="section onlifetv">
+        <div class="container">
+            <h3 class="section-title">Ce mois-ci sur <strong>Life TV</strong></h3>
+            <div class="section-content">
+
+                <a href="#" class="controls top"><i class="icon-keyboard_backspace"></i></a>
+                <a href="#" class="controls bottom"><i class="icon-keyboard_backspace"></i></a>
+
+                <div class="owl-carousel pros">
+                                                            <div class="pro">
+                        <div class="program" style="background-image: url(https://lifetv.ci/cemois/cover_small/1601568757.png)">
+                            <div class="head" onclick=showPopup("https://lifetv.ci/cemois/extrait/1601568757.mp4")>
+                                <div class="icone">
+                                    <div class="circle"></div>
+                                    <div class="circletwo">
+                                        <i class="icon-controller-play"></i>
+                                    </div>
+                                </div>
+                                <p>À partir du 17 
+                                octobre</p>
+                            </div>
+
+                            <div class="foot">
+                                <a href="https://lifetv.ci/emission/cemois/anti-gang">
+                                    <p class="category">Films</p>
+                                    <h3>Action</h3>
+                                    <p class="desc">Serge Buren, flic légendaire de la BRI parisienne, et son équipe de jeunes policiers aux méthodes peu orthodoxes, sont aux prises avec un groupe de...</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                                        <div class="pro">
+                        <div class="program" style="background-image: url(https://lifetv.ci/cemois/cover_small/1601551891.png)">
+                            <div class="head" onclick=showPopup("https://lifetv.ci/cemois/extrait/1601551891.mp4")>
+                                <div class="icone">
+                                    <div class="circle"></div>
+                                    <div class="circletwo">
+                                        <i class="icon-controller-play"></i>
+                                    </div>
+                                </div>
+                                <p>À partir du 30 
+                                octobre</p>
+                            </div>
+
+                            <div class="foot">
+                                <a href="https://lifetv.ci/emission/cemois/jurassic-world">
+                                    <p class="category">Films</p>
+                                    <h3>Action</h3>
+                                    <p class="desc">L&#039;île Nublar accueille maintenant un parc thématique complètement fonctionnel sur les dinosaures, appelé Jurassic World. Après dix ans d&#039;opération et un nombre de visiteurs en...</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                                        <div class="pro">
+                        <div class="program" style="background-image: url(https://lifetv.ci/cemois/cover_small/1601551779.png)">
+                            <div class="head" onclick=showPopup("https://lifetv.ci/cemois/extrait/1601551779.mp4")>
+                                <div class="icone">
+                                    <div class="circle"></div>
+                                    <div class="circletwo">
+                                        <i class="icon-controller-play"></i>
+                                    </div>
+                                </div>
+                                <p>À partir du 10 
+                                octobre</p>
+                            </div>
+
+                            <div class="foot">
+                                <a href="https://lifetv.ci/emission/cemois/bourne-legacy">
+                                    <p class="category">Films</p>
+                                    <h3>Action</h3>
+                                    <p class="desc">Du programme Treadstone, dont Jason Bourne était le cobaye, est né Outcome qui compte Aaron Cross parmi ses meilleurs agents. En ayant dévoilé une partie...</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                                        <div class="pro">
+                        <div class="program" style="background-image: url(https://lifetv.ci/cemois/cover_small/1601551639.png)">
+                            <div class="head" onclick=showPopup("https://lifetv.ci/cemois/extrait/1601551639.mp4")>
+                                <div class="icone">
+                                    <div class="circle"></div>
+                                    <div class="circletwo">
+                                        <i class="icon-controller-play"></i>
+                                    </div>
+                                </div>
+                                <p>À partir du 04 
+                                octobre</p>
+                            </div>
+
+                            <div class="foot">
+                                <a href="https://lifetv.ci/emission/cemois/droit-de-garde">
+                                    <p class="category">Films</p>
+                                    <h3>Drame</h3>
+                                    <p class="desc">Le couple Besson divorce. Pour protéger son fils d&#039;un père qu&#039;elle accuse de violences, Miriam en demande la garde exclusive. La juge en charge du...</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                                        <div class="pro">
+                        <div class="program" style="background-image: url(https://lifetv.ci/cemois/cover_small/1601547675.png)">
+                            <div class="head" onclick=showPopup("https://lifetv.ci/cemois/extrait/1601547675.mp4")>
+                                <div class="icone">
+                                    <div class="circle"></div>
+                                    <div class="circletwo">
+                                        <i class="icon-controller-play"></i>
+                                    </div>
+                                </div>
+                                <p>À partir du 23 
+                                octobre</p>
+                            </div>
+
+                            <div class="foot">
+                                <a href="https://lifetv.ci/emission/cemois/battleship">
+                                    <p class="category">Films</p>
+                                    <h3>Action</h3>
+                                    <p class="desc">Dans l&#039;océan Pacifique, au large des îles Hawaii, l&#039;US Navy est en pleines man?uvres. Une étrange forme menaçante sort alors de l&#039;eau, suivie par de...</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                                        <div class="pro">
+                        <div class="program" style="background-image: url(https://lifetv.ci/cemois/cover_small/1601547569.png)">
+                            <div class="head" onclick=showPopup("https://lifetv.ci/cemois/extrait/1601547569.mp4")>
+                                <div class="icone">
+                                    <div class="circle"></div>
+                                    <div class="circletwo">
+                                        <i class="icon-controller-play"></i>
+                                    </div>
+                                </div>
+                                <p>À partir du 16 
+                                octobre</p>
+                            </div>
+
+                            <div class="foot">
+                                <a href="https://lifetv.ci/emission/cemois/blackhat">
+                                    <p class="category">Films</p>
+                                    <h3>Action</h3>
+                                    <p class="desc">À Hong Kong, la centrale nucléaire de Chai Wan a été hackée. Un logiciel malveillant a ouvert la porte à un autre malware plus puissant...</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                                        <div class="pro">
+                        <div class="program" style="background-image: url(https://lifetv.ci/cemois/cover_small/1601547210.png)">
+                            <div class="head" onclick=showPopup("https://lifetv.ci/cemois/extrait/1601547210.mp4")>
+                                <div class="icone">
+                                    <div class="circle"></div>
+                                    <div class="circletwo">
+                                        <i class="icon-controller-play"></i>
+                                    </div>
+                                </div>
+                                <p>À partir du 09 
+                                octobre</p>
+                            </div>
+
+                            <div class="foot">
+                                <a href="https://lifetv.ci/emission/cemois/fifty-shade-darker">
+                                    <p class="category">Films</p>
+                                    <h3>Romantique</h3>
+                                    <p class="desc">Lorsque Christian Grey blessé tente de séduire et de reconquérir Ana Steele devenue méfiante, elle exige un nouvel accord avant de lui offrir une seconde...</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                                        <div class="pro">
+                        <div class="program" style="background-image: url(https://lifetv.ci/cemois/cover_small/1601546709.png)">
+                            <div class="head" onclick=showPopup("https://lifetv.ci/cemois/extrait/1601546709.mp4")>
+                                <div class="icone">
+                                    <div class="circle"></div>
+                                    <div class="circletwo">
+                                        <i class="icon-controller-play"></i>
+                                    </div>
+                                </div>
+                                <p>À partir du 02 
+                                octobre</p>
+                            </div>
+
+                            <div class="foot">
+                                <a href="https://lifetv.ci/emission/cemois/fifty-shade-of-grey">
+                                    <p class="category">Films</p>
+                                    <h3>Romantique</h3>
+                                    <p class="desc">Étudiante en littérature anglaise, Anastasia Steele se rend à Seattle dans les bureaux de Christian Grey, jeune homme d&#039;affaires déjà à la tête d&#039;un empire...</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                                        <div class="pro">
+                        <div class="program" style="background-image: url(https://lifetv.ci/cemois/cover_small/1601546576.png)">
+                            <div class="head" onclick=showPopup("https://lifetv.ci/cemois/extrait/1601546576.mp4")>
+                                <div class="icone">
+                                    <div class="circle"></div>
+                                    <div class="circletwo">
+                                        <i class="icon-controller-play"></i>
+                                    </div>
+                                </div>
+                                <p>À partir du 01 
+                                octobre</p>
+                            </div>
+
+                            <div class="foot">
+                                <a href="https://lifetv.ci/emission/cemois/champagne">
+                                    <p class="category">Films</p>
+                                    <h3>Drame</h3>
+                                    <p class="desc">Le film raconte l&#039;histoire d&#039;un jeune couple (Alex Ekubo et Rosemary Zimu), qui sont dans un &quot;mariage ouvert&quot;; Pour répondre à leurs besoins financiers en...</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                                        <div class="pro">
+                        <div class="program" style="background-image: url(https://lifetv.ci/cemois/cover_small/1599486023.png)">
+                            <div class="head" onclick=showPopup("https://lifetv.ci/cemois/extrait/1599486023.mp4")>
+                                <div class="icone">
+                                    <div class="circle"></div>
+                                    <div class="circletwo">
+                                        <i class="icon-controller-play"></i>
+                                    </div>
+                                </div>
+                                <p>À partir du 25 
+                                septembre</p>
+                            </div>
+
+                            <div class="foot">
+                                <a href="https://lifetv.ci/emission/cemois/fast-furious-tokyo-drift">
+                                    <p class="category">Films</p>
+                                    <h3>Action</h3>
+                                    <p class="desc">Sean Boswell est un risque-tout à qui sa passion immodérée des voitures de sport trafiquées a déjà attiré de sérieux ennuis avec la police californienne....</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <div class="section ourbroadcasts">
+        <div class="container">
+            <h3 class="section-title">Nos programmes sur <strong>Life TV</strong></h3>
+            <div class="section-content">
+                <div class="allgrid">
+                                                                                            <div class="cols one">
+                            <a href="https://lifetv.ci/emission/les-histoires-de-roro">
+                                <div class="inner" >
+                                    <div class="image" style="background-image: 
+                                        url('https://lifetv.ci/emissions/big/1595520455.png');"></div>
+                                    <div class="overlay"></div>
+                                    <img src="https://lifetv.ci/emissions/logo/1595433533.png" alt="" class="legend">
+                                </div>
+                            </a>
+                        </div>
+                                                                                                                                                                                                                                                                                                
+                        <div class="cols two">
+                                                                                                                                                        <div class="cols twoone">
+                                <a href="https://lifetv.ci/emission/willy-a-midi">
+                                    <div class="inner" >
+                                        <div class="image" style="background-image: 
+                                            url('https://lifetv.ci/emissions/way/1595521235.jpg');"></div>
+                                        <div class="overlay"></div>
+                                        <img src="https://lifetv.ci/emissions/logo/1592350570.png" alt="" class="legend">
+                                    </div>
+                                </a>
+                            </div>
+                            
+                                                                                                                                
+                                                        <div class="cols twotwo">
+                                <a href="https://lifetv.ci/emission/ds-days">
+                                    <div class="inner" >
+                                        <div class="image" style="background-image: 
+                                            url('https://lifetv.ci/emissions/way/1595521093.jpg');"></div>
+                                        <div class="overlay"></div>
+                                        <img src="https://lifetv.ci/emissions/logo/1592399900.png" alt="" class="legend">
+                                    </div>
+                                </a>
+                            </div>
+                                                                                                                                                                                                                                                    </div>
+
+                        <div class="cols three">
+                                                                                                                                                                                                                        
+                                                        <div class="cols threeone">
+                                <a href="https://lifetv.ci/emission/life-talk">
+                                    <div class="inner" >
+                                        <div class="image" style="background-image: 
+                                            url('https://lifetv.ci/emissions/small/1597256686.jpg');"></div>
+                                        <div class="overlay"></div>
+                                        <img src="https://lifetv.ci/emissions/logo/1592401381.png" alt="" class="legend">
+                                    </div>
+                                </a>
+                            </div>
+                            
+                            
+                                                    
+                                                                                                
+                            
+                                                        <div class="cols threetwo">
+                                <a href="https://lifetv.ci/emission/life-wkd">
+                                    <div class="inner" >
+                                        <div class="image" style="background-image: 
+                                            url('https://lifetv.ci/emissions/small/1595620272.jpg');"></div>
+                                        <div class="overlay"></div>
+                                        <img src="https://lifetv.ci/emissions/logo/1592402442.png" alt="" class="legend">
+                                    </div>
+                                </a>
+                            </div>
+                            
+                                                    
+                                                                                                
+                            
+                            
+                                                        <div class="cols threethree">
+                                <a href="https://lifetv.ci/emission/life-shop">
+                                    <div class="inner" >
+                                        <div class="image" style="background-image: 
+                                            url('https://lifetv.ci/emissions/small/1595620225.jpg');"></div>
+                                        <div class="overlay"></div>
+                                        <img src="https://lifetv.ci/emissions/logo/1592403321.png" alt="" class="legend">
+                                    </div>
+                                </a>
+                            </div>
+                                                    
+                                                                        </div>
+                                    </div>
+                <div class="options">
+                	<a href="https://lifetv.ci/emissions/tous" class="icon">
+                        <span class="ic">
+                            <span class="icon-chevron-right"></span>
+                        </span> 
+                        Voir tous les programmes
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <div class="section extras">
+        <div class="section-content">
+            <div class="extrasinner">
+                <div class="extra left">
+                    <a href="https://lifetv.ci/participer">
+                        <div class="inner">
+                            <div class="image"></div>
+                            <div class="overlay"></div>
+                            <h3>Comment Participer <br> à nos évènements ?</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="extra center">
+                    <div class="inner">
+                        <div class="socialbloc facebook">
+                            <a target="blank" href="https://web.facebook.com/LIFETVCI?_rdc=1&amp;amp;_rdr">
+                                <div class="icone">
+                                    <i class="icon-facebook"></i>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="socialbloc instagram">
+                            <a target="blank" href="https://www.instagram.com/lifetvofficiel/">
+                                <div class="icone">
+                                    <i class="icon-instagram"></i>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="socialbloc youtube">
+                            <a target="blank" href="https://www.youtube.com/channel/UCjV4LsFRnOsM_qzDk15bB5Q?view_as=subscriber">
+                                <div class="icone">
+                                    <i class="icon-youtube-play"></i>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="socialbloc twitter">
+                            <a target="blank" href="https://twitter.com/lifetvci">
+                                <div class="icone">
+                                    <i class="icon-twitter"></i>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="extra right">
+                    <a href="https://lifetv.ci/contacts">
+                        <div class="inner">
+                            <div class="image"></div>
+                            <div class="overlay"></div>
+                            <h3>Vous souhaitez <br> nous contacter ?</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    
+    <br>
+    <br>
+    <br>
+    <div class="section encarttwo">
+    <div class="bgstuffs">
+        <img src="https://lifetv.ci/resources/img/encarttwo-radial.png" alt="" class="radial">
+        <img src="https://lifetv.ci/resources/img/encarttwo-friseone.png" alt="" class="friseone">
+        <img src="https://lifetv.ci/resources/img/encarttwo-frisetwo.png" alt="" class="frisetwo">
+    </div>
+
+    <div class="section-content">
+        <div class="container">
+            <div class="relative">
+                <img src="https://lifetv.ci/resources/img/encarttwo-phones.png" alt="" class="phones">
+                <div class="textandactions">
+                    <div class="texts">
+                        <h3>Bientôt</h3>
+                        <h3>L'application</h3>
+                        <h3>LifeTV</h3>
+                        <div style="margin-top: 10px; width: 110%;"> <a href="https://lifetv.ci/inscription" style="color: #FFF;">Inscrivez-vous pour être informé en premier</a> </div>
+                    </div>
+                    <div class="actions">
+                                                <!-- <a href="">
+                            <img src="https://lifetv.ci/resources/img/playstore.png" alt="" class="playstore">
+                        </a>
+                        <a href="">
+                            <img src="https://lifetv.ci/resources/img/appstore.png?v=1.0" alt="" class="appstore">
+                        </a> -->
+                                            </div>
+
+                    <img src="https://lifetv.ci/resources/img/logo.png" alt="" class="logotype">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</div>
+
+        
+        <style>
+            .copyright, .copyright a{ color: #888; }
+            .copyright a{ text-decoration: underline; }
+        </style>
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <img src="https://lifetv.ci/resources/img/logo.png" alt="" class="logo">
+                    </div>
+                    <div class="col-12 col-md-9">
+                        <div class="row">
+                            <div class="col-6 col-md-3">
+                                <h3 class="section-title">La chaine</h3>
+
+                                <ul class="links">
+                                    <li><a href="https://lifetv.ci/la-chaine">Présentation</a></li>
+                                    <li><a href="https://lifetv.ci/carrieres">Carrière</a></li>
+                                    <li><a href="https://lifetv.ci/contacts">Nous contacter</a></li>
+                                    <li><a href="https://lifetv.ci/cgu">Conditions générales d'utilisation</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <h3 class="section-title">Nos programmes</h3>
+
+                                <ul class="links">
+                                    <li><a href="https://lifetv.ci/programme">Grille TV</a></li>
+                                    <li><a href="https://lifetv.ci/emissions/tous">Tous les programmes</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <h3 class="section-title">Replay</h3>
+
+                                <ul class="links">
+                                    <li><a href="https://lifetv.ci/front/login">Se connecter</a></li>
+                                    <li><a href="https://lifetv.ci/inscription">S'inscrire</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <h3 class="section-title">Appli mobile</h3>
+
+                                <ul class="links">
+                                    <li style="margin-bottom: 5px;">LifeTV</li>
+                                    <li>
+                                        <a href="#"><img src="https://lifetv.ci/resources/img/playstore.png" alt="" class="playstore"></a>
+                                        <a href="#"><img src="https://lifetv.ci/resources/img/appstore.png?v=1.0" alt="" class="appstore"></a>
+                                    </li>
+                                </ul>
+
+                                <div class="followus">
+                                    <h3>Suivez nous</h3>
+                                    <ul class="socialize">
+                                        <li class="facebook"><a href="https://web.facebook.com/LIFETVCI?_rdc=1&amp;amp;_rdr" target="blank"><i class="icon-facebook"></i></a></li>
+                                        <li class="instagram"><a href="https://www.instagram.com/lifetvofficiel/" target="blank"><i class="icon-instagram"></i></a></li>
+                                        <li class="youtube"><a href="https://www.youtube.com/channel/UCjV4LsFRnOsM_qzDk15bB5Q?view_as=subscriber" target="blank"><i class="icon-youtube-play"></i></a></li>
+                                        <li class="twitter"><a href="https://twitter.com/lifetvci"><i class="icon-twitter"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-12">
+                        <br class="d-sm-block d-md-none"><br class="d-sm-block d-md-none">
+                        <p class="copyright">&copy; Copyright 2020 LifeTV - Concept by <a href="http://hardsoft-ci.com/" target="blank">Hardsoft</a></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="https://lifetv.ci/resources/js/jquery.js"></script>
+        <script src="https://lifetv.ci/resources/js/bootstrap.js?v=1.0"></script>
+
+        <script type="text/javascript">
+            var videoPopup = document.getElementById('popupVideo');
+            function showPopup(url){
+                $('.bgPopUp, .popUp').fadeIn();
+                videoPopup.src=url;
+                videoPopup.play();
+            }
+
+            function closePopup(){
+                $('.bgPopUp, .popUp').fadeOut();
+                videoPopup.src="";
+                videoPopup.stop();
+            }
+
+            $(document).ready(function () {
+                $('.header .menuic a').on('click', function (event) {
+                    event.preventDefault();
+
+                    if(!$('.second-menu').hasClass('active')){
+                        $('.second-menu').fadeIn().addClass('active');
+                    }
+                });
+
+                $('.second-menu .closer').on('click', function (event) {
+                    event.preventDefault();
+
+                    if($('.second-menu').hasClass('active')){
+                        $('.second-menu').fadeOut().removeClass('active');
+                    }
+                });
+            });
+        </script>
+
+        <script src="https://lifetv.ci/resources/owl/owl.carousel.min.js"></script>
+<script src="https://lifetv.ci/resources/js/cycle.js"></script>
+<script>
+    $(document).ready(function(){
+        let owllife = $('.onlifetv .owl-carousel');
+        
+        owllife.owlCarousel({
+            margin:25,
+            loop: true,
+            responsiveClass:true,
+            responsive:{
+                0:{
+                    items:1,
+                },
+                600:{
+                    items: 3
+                },
+                1100:{
+                    items: 4
+                }
+            }
+        });
+
+        $('.onlifetv .controls.top').click(function(event) {
+            event.preventDefault();
+            owllife.trigger('next.owl.carousel');
+        });
+
+        $('.onlifetv .controls.bottom').click(function(event) {
+            event.preventDefault();
+            owllife.trigger('prev.owl.carousel');
+        });
+    });
+</script>
+    </body>
+</html>
